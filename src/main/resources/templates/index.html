@@ -1,53 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>My Recipe</title>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-</head>
-<body>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta charset="UTF-8">
     <title>My Recipe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-        }
+<!--    <style>-->
+<!--        body, html {-->
+<!--            height: 100%;-->
+<!--            margin: 0;-->
+<!--        }-->
 
-        .bg {
-            /* The image used */
-            /*background-image:
-            url("https://upload.wikimedia.org/wikipedia/commons/1/1d/Crabcakes_and_salad,_Tate_Modern.jpg");*/
-            background-image:url("momo.jpg");
-            /* Full height */
-            height: 100%;
+<!--        .bg {-->
+<!--            /* The image used */-->
+<!--            /*background-image:-->
+<!--            url("https://upload.wikimedia.org/wikipedia/commons/1/1d/Crabcakes_and_salad,_Tate_Modern.jpg");*/-->
+<!--            background-image:url("momo.jpg");-->
+<!--            /* Full height */-->
+<!--            height: 100%;-->
 
-            /* Center and scale the image nicely */
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+<!--            /* Center and scale the image nicely */-->
+<!--            background-position: center;-->
+<!--            background-repeat: no-repeat;-->
+<!--            background-size: cover;-->
+<!--        }-->
 
 
-        .hero-text {
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #fefefe;
-            text-shadow: 1px 1px 2px #0a0a0a;
-        }
+<!--        .hero-text {-->
+<!--            text-align: center;-->
+<!--            position: absolute;-->
+<!--            top: 50%;-->
+<!--            left: 50%;-->
+<!--            transform: translate(-50%, -50%);-->
+<!--            color: #fefefe;-->
+<!--            text-shadow: 1px 1px 2px #0a0a0a;-->
+<!--        }-->
 
-    </style>
+<!--    </style>-->
+
+<!--    <link rel="stylesheet" href="css/styles.css" type = "text/css" >-->
 
 </head>
 
@@ -62,20 +55,74 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="Home.html">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="Home.html">Home</a>
+            <a class="nav-item nav-link active" href="/home">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="home.html">Home</a>
             <a class="nav-item nav-link" href="#">Pricing</a>
-            <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contact us</a>
         </div>
     </div>
 </nav>
 
+<!--<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">-->
+<!--    <ol class="carousel-indicators">-->
+<!--        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>-->
+<!--        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>-->
+<!--        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>-->
+<!--    </ol>-->
+<!--    <div class="carousel-inner">-->
+<!--        <div class="carousel-item active">-->
+<!--            <img src="../images/momo.jpg" class="d-block w-100" alt="...">-->
+<!--        </div>-->
+<!--        <div class="carousel-item">-->
+<!--            <img src="../images/cdumpl.jpg" class="d-block w-100" alt="...">-->
+<!--        </div>-->
+<!--        <div class="carousel-item">-->
+<!--            <img src="../images/dumpl.jpeg" class="d-block w-100" alt="...">-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">-->
+<!--        <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+<!--        <span class="sr-only">Previous</span>-->
+<!--    </a>-->
+<!--    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">-->
+<!--        <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+<!--        <span class="sr-only">Next</span>-->
+<!--    </a>-->
+<!--</div>-->
 
 
-<div class="bg">My Recipe</div>
-<div class="hero-text">
-    <h1 style="font-size:50px">My Recipe</h1>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1" ></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img th:src="@{/images/momo.jpg}" class="d-block w-100" alt="Delicious Mo:Mo:">
+        </div>
+        <div class="carousel-item  ">
+            <img th:src="@{/images/cdumpl.jpg}" class="d-block w-100" alt="Delicous Chinese Dumpling">
+        </div>
+        <div class="carousel-item ">
+            <img th:src="@{/images/dumpl.jpeg}" class="d-block w-100" alt="Yummy Dumpling">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
 </div>
+
+
+<!--<div class="bg">My Recipe</div>-->
+<!--<div class="hero-text">-->
+<!--    <h1 style="font-size:50px">My Recipe for delicious Mo:Mo:</h1>-->
+<!--</div>-->
 
 
 

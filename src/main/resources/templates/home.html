@@ -5,7 +5,11 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta charset="utf-8">
     <title>My Recipe</title>
+
+    <link rel="stylesheet" href="css/styles.css" type = "text/css" >
 </head>
+
+
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">My Recipe</a>
@@ -18,17 +22,23 @@
             <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="#">Features</a>
             <a class="nav-item nav-link" href="#">Pricing</a>
-            <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contact us</a>
         </div>
     </div>
 </nav>
 
 
 <h1>Momo Recipe</h1>
-<h2>Ingredients</h2>
+<!--<h2>Ingredients</h2>-->
+
+<!--For Auto-layout columns-->
+<div class="container">
+    <div class="row">
+        <div class="col">
+
 
 <div class="card" style="width: 18rem;">
-    <img alt="Delicious MoMo" class="card-img-top" src="momo.jpg">
+    <img src="../images/momo.jpg" alt="Delicious MoMo" class="card-img-top" >
     <div class="card-body">
         <h5 class="card-title">Ingredients</h5>
 
@@ -72,6 +82,8 @@
 <!--    <a href="#" class="list-group-item list-group-item-action list-group-item-dark">1 teaspoon ground cinnamon</a>-->
 <!--    <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Salt and black pepper</a>-->
 <!--</div>-->
+        </div>
+        <div class="col">
 
 <p>
 <h2><b>Directions:</b></h2>
@@ -100,16 +112,22 @@
 
 </ol>
 
-
 </p>
 
+<!-- For completing Auto-layout columns-->
+        </div>
+</div>
+</div>
 
 
-<p>
+Serve at once with salsa, or tomato sauce on the side
 
-Serve at once with salsa, or tomato sauce on the side.
 
-</p>
+<!--<div class="bg">My Recipe</div>-->
+<!--<div class="hero-text">-->
+<!--    <h1>My Recipe</h1>-->
+<!--</div>-->
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
